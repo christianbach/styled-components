@@ -11,6 +11,7 @@ const Container = styled.View`
   justify-content: center;
   height: 100%;
   padding: 10px;
+
 `
 
 const themeLight = {
@@ -42,7 +43,7 @@ class App extends Component {
   render() {
     return (
       <ThemeProvider theme={this.state.theme}>
-        <Container>
+        <Container testID="root">
           <Button onPress={() => this.changeTheme()} text={'Ändra tema'} />
           <SecondaryButton text={'En annan knapp'} />
         </Container>
